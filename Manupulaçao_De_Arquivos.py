@@ -27,7 +27,7 @@ def lerArquivo(nome):
     except:
         print(f'\033[0;31mErro ao ler o Arquivo! \033[m')
     else:
-        print('---------DADOS PREENCHIDOS--------')
+        cabecalho('DADOS PREENCHIDOS')
         for linha in a:
             dados=linha.split(';')
             dados[1]=dados[1].replace('\n','')
