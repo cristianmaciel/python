@@ -1,26 +1,23 @@
+
 from os import *
 from time import *
 def soma():
-    n1=LeiaInt("\033[0;34mDigite o Primeiro valor: \033[m")
-    n2=LeiaInt("\033[0;34mDigite o Segundo valor: \033[m")
+    n1,n2= dados()
     total = n1 + n2
     return print(f"{n1}+{n2}={total}")
 
 def divi():
-    n1=LeiaInt("\033[0;34mDigite o Primeiro valor: \033[m")
-    n2=LeiaInt("\033[0;34mDigite o Segundo valor: \033[m")
+    n1,n2= dados()
     total = n1 / n2
     return print(f"{n1}/{n2}={total}")
 
 def mult():
-    n1=LeiaInt("\033[0;34mDigite o Primeiro valor: \033[m")
-    n2=LeiaInt("\033[0;34mDigite o Segundo valor: \033[m")
+    n1,n2= dados()
     total = n1 * n2
     return print(f"{n1}*{n2}={total}")
 
 def subt():
-    n1=LeiaInt("\033[0;34mDigite o Primeiro valor: \033[m")
-    n2=LeiaInt("\033[0;34mDigite o Segundo valor: \033[m")
+    n1,n2= dados()
     total = n1 - n2
     return print(f"{n1}-{n2}={total}")
 
@@ -51,3 +48,8 @@ def menu():
 def saindo():
     print("\033[0;33mSaindo do sistema!\033[m") 
     sleep(3)
+
+def dados():
+    n1=LeiaInt("\033[0;34mDigite o Primeiro valor: \033[m")
+    n2=LeiaInt("\033[0;34mDigite o Segundo valor: \033[m")
+    return n1,n2
