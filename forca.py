@@ -30,13 +30,13 @@ letras_acertada=['_'for letra in palavra_secreta]
 acertou=False
 enforcou=False
 erros=0
-os.system('clear')
+os.system('clear')#no linux trocar o "clear" por "cls"
 menuForca('Bem vindo ao jogo da Forca')
 print(f'\033[0;33m{letras_acertada}\033[m')
 while (not enforcou and not acertou):
     chute=str(input('\033[0;32mQual a letra? \033[m')).upper()
     chute = chute.strip().upper()
-    os.system('clear')
+    os.system('clear')#no linux trocar o "clear" por "cls"
     menuForca('Bem vindo ao jogo da Forca')
     if chute in palavra_secreta:
         posicao=0
@@ -56,4 +56,4 @@ else:
 time.sleep(2)
 print('\033[0;31mFim do Jogo\033[m')
 time.sleep(2)
-os.system('clear')
+os.system('clear')#no linux trocar o "clear" por "cls"
