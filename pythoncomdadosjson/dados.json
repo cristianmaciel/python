@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nome": "SEBASTIAO",
+    "idade": 37,
+    "empresa": "NUBANK"
+  },
+  {
+    "id": 2,
+    "nome": "JOAO",
+    "idade": 23,
+    "empresa": "BANCO INTER"
+  },
+  {
+    "id": 3,
+    "nome": "CLEUSA",
+    "idade": 42,
+    "empresa": "PICPAY"
+  }
+]
