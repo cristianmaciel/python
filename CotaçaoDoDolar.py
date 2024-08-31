@@ -24,6 +24,7 @@ def pegar_cotacoes():
 #janela da interface grafica do programa
 janela = Tk()
 janela.title('Cotação Atual')
+janela.geometry("260x200")
 
 texto_orientacao = Label(janela, text='CLIQUE PARA CONSULTAR COTAÇAO' )
 texto_orientacao.grid(column=0, row=0, padx=10, pady= 10)
