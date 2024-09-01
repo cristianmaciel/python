@@ -17,12 +17,17 @@ def menu():
 #lista os bancos de dados ja criados
 def listardb():
     cursor = meubd.cursor()
-    cursor.execute("SHOW DATABASES")
-    databases = cursor.fetchall()  # Retorna uma lista de tuplas
+    try:
+        cursor.execute("SHOW DATABASES")
+        databases = cursor.fetchall()  # Retorna uma lista de tuplas
 
-    print("Bancos de dados existentes:")
-    for db in databases:
-        print(f"\033[0;33m- {db[0]}\033[m")
+        print("Bancos de dados existentes:")
+        for db in databases:
+            print(f"\033[0;33m- {db[0]}\033[m")
+    except mysql.connector.Error as err:
+        print(f'\033[0;31mErro ao listar banco de dados: {err}\033[m')
+    finally:
+        cursor.close()
 
 # Criando um novo banco de dados
 def criarbd():
@@ -35,7 +40,7 @@ def criarbd():
         print(f'\033[0;31mErro ao criar bando de dados: {err}\033[m')
     finally:
         cursor.close()
-        
+
 # Deletando o banco de dados
 def deletarbd():
     cursor = meubd.cursor()
